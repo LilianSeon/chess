@@ -11,7 +11,7 @@ export default function SquareStyles({ boardWidth }) {
   const [moveSquares, setMoveSquares] = useState({});
   const [optionSquares, setOptionSquares] = useState({});
 
-  const url = "http://localhost:8080";
+  const url = `${window.location.protocol}//${window.location.hostname}:8080`;
   const manager = new Manager(url);
   const socket = manager.socket("/"); // main namespace
   //const socket = io(url);
